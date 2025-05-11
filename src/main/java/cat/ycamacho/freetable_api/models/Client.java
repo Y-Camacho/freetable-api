@@ -3,6 +3,7 @@ package cat.ycamacho.freetable_api.models;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -13,15 +14,18 @@ import jakarta.persistence.OneToMany;
 public class Client {
 
     @Id
+    @Column(length = 60)
     private String email;
+    @Column(nullable = false, length = 100)
     private String name;
+    @Column(nullable = false)
     private String numberPhone;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private List<Reservation> reservations;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id")
+    @JoinColumn(name = "admin_email")
     private Admin admin; 
 
     // Accesores

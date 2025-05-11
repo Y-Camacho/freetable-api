@@ -23,7 +23,7 @@ public class Reservation {
     private Restaurant restaurant;
 
     @ManyToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(name = "client_email")
     private Client client;
     
     public int getNumDiners() { return numDiners; }

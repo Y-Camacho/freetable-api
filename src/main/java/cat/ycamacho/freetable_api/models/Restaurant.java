@@ -1,9 +1,14 @@
 package cat.ycamacho.freetable_api.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,7 +16,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
-enum Tags {
+enum Tag {
     MEDITERRANEO, ASIATICO, ITIALIANO, VEGETARIANO, VEGANO, PARRILLA
 }
 
@@ -21,18 +26,55 @@ public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(nullable = false, length = 100)
     private String name;
+
+    @Column(nullable = false, length = 60)
     private String email;
+
+    @Column(nullable = false, length = 300)
     private String description;
+
     private String address;
-    private String numDiners;
+    private int numDiners;
+
+    @ElementCollection(targetClass = Tag.class)
+    @Enumerated(EnumType.STRING)
+    private List<Tag> tags;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private List<Reservation> reservations;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id")
+    @JoinColumn(name = "admin_email")
     private Admin admin; 
+
+    // Metodos
+
+    /**
+     * Obtiene un string con tags separador con coma ',' y los convierte en un 
+     * List<Tag>
+     * @param tagsString
+     */
+    public void setTagsString(String tagsString){
+        String[] tagsArray = tagsString.split(",");
+        List<Tag> dTags = new ArrayList<>();
+
+        for (String tag : tagsArray) {
+            try {
+                // Limpia espacios y convierte el valor a mayúsculas para que coincida con el enum.
+                Tag ejTag = Tag.valueOf(tag.trim().toUpperCase());
+                dTags.add(ejTag);
+            } catch (IllegalArgumentException e) {
+                // Imprime un mensaje si el tag no es válido.
+                System.err.println("Etiqueta no válida: " + tag);
+            }
+        }
+
+        // Asigna la lista de tags a una variable de clase (si corresponde).
+        this.tags = dTags;
+    }
     
     // Accesores
     public int getId() { return id; }
@@ -50,8 +92,8 @@ public class Restaurant {
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
     
-    public String getNumDiners() { return numDiners; }
-    public void setNumDiners(String numDiners) { this.numDiners = numDiners; }
+    public int getNumDiners() { return numDiners; }
+    public void setNumDiners(int numDiners) { this.numDiners = numDiners; }
 
     public List<Reservation> getReservations() { return reservations; }
     public void setReservations(List<Reservation> reservations) { this.reservations = reservations; }
@@ -59,10 +101,16 @@ public class Restaurant {
     public Admin getAdmin() { return admin; }
     public void setAdmin(Admin admin) { this.admin = admin; }
     
+    public List<Tag> getTags() { return tags; }
+    public void setTags(List<Tag> tags) { this.tags = tags; }
+    
+
+    
     @Override
     public String toString() {
         return "Restaurant: {id=" + id + ", name=" + name + ", email=" + email + ", description=" + description
-                + ", address=" + address + ", numDiners=" + numDiners + "}";
+                + ", address=" + address + ", numDiners=" + numDiners + ", tags=" + tags + ", reservations="
+                + reservations + "}";
     }
     @Override
     public int hashCode() {

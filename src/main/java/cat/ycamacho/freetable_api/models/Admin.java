@@ -1,25 +1,25 @@
 package cat.ycamacho.freetable_api.models;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class Admin {
     
     @Id
+    @Column(length = 60)
     private String email;
+    @Column(nullable = false, length = 100)
     private String name;
+    @Column(nullable = false, length = 15)
     private String password;
 
-    @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
-    private List<Client> clients;
+    // @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
+    // private List<Client> clients;
 
-    @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
-    private List<Restaurant> restaurants;
+    // @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
+    // private List<Restaurant> restaurants;
 
     // Accesores
     public String getName() { return name; }
@@ -31,11 +31,11 @@ public class Admin {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
     
-    public List<Client> getClients() { return clients; }
-    public void setClients(List<Client> clients) { this.clients = clients; }
+    // public List<Client> getClients() { return clients; }
+    // public void setClients(List<Client> clients) { this.clients = clients; }
 
-    public List<Restaurant> getRestaurants() { return restaurants; }
-    public void setRestaurants(List<Restaurant> restaurants) { this.restaurants = restaurants; }
+    // public List<Restaurant> getRestaurants() { return restaurants; }
+    // public void setRestaurants(List<Restaurant> restaurants) { this.restaurants = restaurants; }
 
     @Override
     public String toString() {
