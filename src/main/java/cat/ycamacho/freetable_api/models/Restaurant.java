@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -39,9 +38,15 @@ public class Restaurant {
     private String address;
     private int numDiners;
 
-    @ElementCollection(targetClass = Tag.class)
-    @Enumerated(EnumType.STRING)
-    private List<Tag> tags;
+    @ElementCollection
+    @CollectionTable(name = "restaurant_tags", joinColumns = @JoinColumn(name = "restaurant_id"))
+    @Column(name = "tag")
+    private List<String> tags;
+
+    @ElementCollection
+    @CollectionTable(name = "restaurant_imgs", joinColumns = @JoinColumn(name = "restaurant_id"))
+    @Column(name = "image")
+    private List<String> images;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private List<Reservation> reservations;
@@ -59,13 +64,14 @@ public class Restaurant {
      */
     public void setTagsString(String tagsString){
         String[] tagsArray = tagsString.split(",");
-        List<Tag> dTags = new ArrayList<>();
+        List<String> tags = new ArrayList<String>();
+        
 
         for (String tag : tagsArray) {
             try {
                 // Limpia espacios y convierte el valor a mayúsculas para que coincida con el enum.
                 Tag ejTag = Tag.valueOf(tag.trim().toUpperCase());
-                dTags.add(ejTag);
+                tags.add(ejTag.toString());
             } catch (IllegalArgumentException e) {
                 // Imprime un mensaje si el tag no es válido.
                 System.err.println("Etiqueta no válida: " + tag);
@@ -73,7 +79,7 @@ public class Restaurant {
         }
 
         // Asigna la lista de tags a una variable de clase (si corresponde).
-        this.tags = dTags;
+        this.tags = tags;
     }
     
     // Accesores
@@ -101,17 +107,19 @@ public class Restaurant {
     public Admin getAdmin() { return admin; }
     public void setAdmin(Admin admin) { this.admin = admin; }
     
-    public List<Tag> getTags() { return tags; }
-    public void setTags(List<Tag> tags) { this.tags = tags; }
+    public List<String> getTags() { return tags; }
+    public void setTags(List<String> tags) { this.tags = tags; }
     
-
+    public List<String> getImages() { return images; }
+    public void setImages(List<String> images) { this.images = images; }
     
     @Override
     public String toString() {
-        return "Restaurant: {id=" + id + ", name=" + name + ", email=" + email + ", description=" + description
-                + ", address=" + address + ", numDiners=" + numDiners + ", tags=" + tags + ", reservations="
-                + reservations + "}";
+        return "Restaurant [id=" + id + ", name=" + name + ", email=" + email + ", description=" + description
+                + ", address=" + address + ", numDiners=" + numDiners + ", tags=" + tags + ", images=" + images
+                + ", admin=" + admin + "]";
     }
+
     @Override
     public int hashCode() {
         final int prime = 31;

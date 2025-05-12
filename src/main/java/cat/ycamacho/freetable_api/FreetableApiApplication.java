@@ -1,6 +1,7 @@
 package cat.ycamacho.freetable_api;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -61,6 +62,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res1.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res1.setNumDiners(25);
 		res1.setTagsString("parrilla,asiatico");
+		res1.setImages(Arrays.asList("res_1_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res1);
 
 		Restaurant res2 = new Restaurant();
@@ -71,6 +73,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res2.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res2.setNumDiners(25);
 		res2.setTagsString("parrilla,asiatico");
+		res2.setImages(Arrays.asList("res_2_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res2);
 
 		Restaurant res3 = new Restaurant();
@@ -81,6 +84,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res3.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res3.setNumDiners(25);
 		res3.setTagsString("parrilla,asiatico");
+		res3.setImages(Arrays.asList("res_3_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res3);
 
 		Restaurant res4 = new Restaurant();
@@ -91,6 +95,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res4.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res4.setNumDiners(25);
 		res4.setTagsString("parrilla,asiatico");
+		res4.setImages(Arrays.asList("res_4_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res4);
 
 		Restaurant res5 = new Restaurant();
@@ -101,6 +106,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res5.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res5.setNumDiners(25);
 		res5.setTagsString("parrilla,asiatico");
+		res5.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res5);
 
 		// CLIENTES
