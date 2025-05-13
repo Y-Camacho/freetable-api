@@ -6,6 +6,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,11 +15,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @RestController
+@RequestMapping("/files")
 public class FileController {
 
     private final String IMAGE_DIRECTORY = "src/main/resources/static/images/";
 
-    @GetMapping("/files")
+    @GetMapping
     public ResponseEntity<Resource> getImage(@RequestParam("imgName") String imgName) {
         try {
             // Construir la ruta de la imagen
@@ -46,4 +48,3 @@ public class FileController {
         }
     }
 }
-

@@ -1,14 +1,10 @@
 package cat.ycamacho.freetable_api.models;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class Client {
@@ -21,12 +17,13 @@ public class Client {
     @Column(nullable = false)
     private String numberPhone;
 
-    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
-    private List<Reservation> reservations;
+    // @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    // private List<Reservation> reservations;
 
     @ManyToOne
     @JoinColumn(name = "admin_email")
-    private Admin admin; 
+    private Admin admin;
+
 
     // Accesores
     public String getEmail() { return email; }
@@ -38,8 +35,8 @@ public class Client {
     public String getNumberPhone() { return numberPhone; }
     public void setNumberPhone(String numberPhone) { this.numberPhone = numberPhone; }
 
-    public List<Reservation> getReservations() { return reservations; }
-    public void setReservations(List<Reservation> reservations) { this.reservations = reservations; }
+    // public List<Reservation> getReservations() { return reservations; }
+    // public void setReservations(List<Reservation> reservations) { this.reservations = reservations; }
 
     public Admin getAdmin() { return admin; }
     public void setAdmin(Admin admin) { this.admin = admin; }

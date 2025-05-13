@@ -21,6 +21,9 @@ public class Admin {
     // @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
     // private List<Restaurant> restaurants;
 
+    public Admin() { }
+    public Admin(String email) { this.email = email; }
+
     // Accesores
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

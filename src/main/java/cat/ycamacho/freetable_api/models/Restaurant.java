@@ -3,7 +3,6 @@ package cat.ycamacho.freetable_api.models;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -13,10 +12,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 
 enum Tag {
-    MEDITERRANEO, ASIATICO, ITIALIANO, VEGETARIANO, VEGANO, PARRILLA
+    MEDITERRANEO, ASIATICO, ITALIANO, VEGETARIANO, VEGANO, PARRILLA
 }
 
 @Entity
@@ -48,8 +46,8 @@ public class Restaurant {
     @Column(name = "image")
     private List<String> images;
 
-    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
-    private List<Reservation> reservations;
+    // @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    // private List<Reservation> reservations; //
 
     @ManyToOne
     @JoinColumn(name = "admin_email")
@@ -59,14 +57,13 @@ public class Restaurant {
 
     /**
      * Obtiene un string con tags separador con coma ',' y los convierte en un 
-     * List<Tag>
+     * List<String>
      * @param tagsString
      */
     public void setTagsString(String tagsString){
         String[] tagsArray = tagsString.split(",");
         List<String> tags = new ArrayList<String>();
         
-
         for (String tag : tagsArray) {
             try {
                 // Limpia espacios y convierte el valor a mayúsculas para que coincida con el enum.
@@ -80,6 +77,24 @@ public class Restaurant {
 
         // Asigna la lista de tags a una variable de clase (si corresponde).
         this.tags = tags;
+    }
+
+    /**
+     * Función que verifica que los tags de un restaurante sean válidos
+     */
+    public void testTags() {
+        List<String> tags = this.getTags();
+        
+        for (String tag : tags) {
+            try {
+                // Aprovecha que el .valueOf() lanza una excepción si no hay coincidencia
+                Tag ejTag = Tag.valueOf(tag.trim().toUpperCase());
+                System.out.println(ejTag);// Es para que no marque el unused xd
+            } catch (IllegalArgumentException e) {
+                // Y lanza la misma excepción
+                throw e;
+            }
+        }
     }
     
     // Accesores
@@ -101,9 +116,6 @@ public class Restaurant {
     public int getNumDiners() { return numDiners; }
     public void setNumDiners(int numDiners) { this.numDiners = numDiners; }
 
-    public List<Reservation> getReservations() { return reservations; }
-    public void setReservations(List<Reservation> reservations) { this.reservations = reservations; }
-    
     public Admin getAdmin() { return admin; }
     public void setAdmin(Admin admin) { this.admin = admin; }
     

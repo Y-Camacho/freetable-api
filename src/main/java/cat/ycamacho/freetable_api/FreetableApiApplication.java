@@ -40,7 +40,6 @@ public class FreetableApiApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		seed();
-		
 	}
 
 	@Transactional
@@ -61,14 +60,14 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res1.setEmail("restaurant1@email.com");
 		res1.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res1.setNumDiners(25);
-		res1.setTagsString("parrilla,asiatico");
+		res1.setTagsString("mediterraneo,asiatico");
 		res1.setImages(Arrays.asList("res_1_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res1);
 
 		Restaurant res2 = new Restaurant();
 		res2.setAdmin(admin);
 		res2.setAddress("Calle l'ensenyanza 23");
-		res2.setName("El refujio del sabor");
+		res2.setName("La Cueva del Chef");
 		res2.setEmail("restaurant2@email.com");
 		res2.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res2.setNumDiners(25);
@@ -79,33 +78,33 @@ public class FreetableApiApplication implements CommandLineRunner {
 		Restaurant res3 = new Restaurant();
 		res3.setAdmin(admin);
 		res3.setAddress("Calle l'ensenyanza 23");
-		res3.setName("El refujio del sabor");
+		res3.setName("El Jardín de los Sabores");
 		res3.setEmail("restaurant3@email.com");
 		res3.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res3.setNumDiners(25);
-		res3.setTagsString("parrilla,asiatico");
+		res3.setTagsString("vegano,vegetariano");
 		res3.setImages(Arrays.asList("res_3_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res3);
 
 		Restaurant res4 = new Restaurant();
 		res4.setAdmin(admin);
 		res4.setAddress("Calle l'ensenyanza 23");
-		res4.setName("El refujio del sabor");
+		res4.setName("Sabores de la Tierra");
 		res4.setEmail("restaurant4@email.com");
 		res4.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res4.setNumDiners(25);
-		res4.setTagsString("parrilla,asiatico");
+		res4.setTagsString("parrilla,italiano");
 		res4.setImages(Arrays.asList("res_4_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res4);
 
 		Restaurant res5 = new Restaurant();
 		res5.setAdmin(admin);
 		res5.setAddress("Calle l'ensenyanza 23");
-		res5.setName("El refujio del sabor");
+		res5.setName("La Taberna de la Abuela");
 		res5.setEmail("restaurant5@email.com");
 		res5.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res5.setNumDiners(25);
-		res5.setTagsString("parrilla,asiatico");
+		res5.setTagsString("parrilla,mediterraneo");
 		res5.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res5);
 

@@ -41,7 +41,7 @@ public class Reservation {
     @Override
     public String toString() {
         return "Reservation [id=" + id + ", numDiners=" + numDiners + ", dateTime=" + dateTime + ", restaurant="
-                + restaurant.getId() + ", client=" + client.getName() + "]";
+                 + "]";
     }
     @Override
     public int hashCode() {
