@@ -17,9 +17,6 @@ public interface RestaurantRepository extends CrudRepository<Restaurant, Integer
        "AND (:tag IS NULL OR :tag MEMBER OF r.tags)")
     List<Restaurant> findByNameAndTag(@Param("resName") String resName, @Param("tag") String tag);
 
-    // @Query("SELECT r FROM Restaurant r WHERE r.name LIKE %?1%")
-    // List<Restaurant> findLikeName(String resName);
-    
-    // @Query("SELECT r FROM Restaurant r WHERE r.name LIKE %?1%")
-    // List<Restaurant> findByTag(String tag);
+    List<Restaurant> findByEmail(String email);
+
 }

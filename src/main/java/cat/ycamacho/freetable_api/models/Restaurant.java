@@ -27,7 +27,7 @@ public class Restaurant {
     @Column(nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false, length = 60)
+    @Column(nullable = false, length = 60, unique = true)
     private String email;
 
     @Column(nullable = false, length = 300)

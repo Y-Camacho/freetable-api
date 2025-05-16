@@ -1,6 +1,7 @@
 package cat.ycamacho.freetable_api;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -148,43 +149,50 @@ public class FreetableApiApplication implements CommandLineRunner {
 
 		Reservation reserva1 = new Reservation();
 		reserva1.setNumDiners(2);				
-		reserva1.setDateTime(LocalDateTime.now());
+		reserva1.setDate(LocalDate.now());
+		reserva1.setHour(LocalTime.now());
 		reserva1.setClient(client1);
 		reserva1.setRestaurant(res1);		
 
 		Reservation reserva2 = new Reservation();
 		reserva2.setNumDiners(4);			
-		reserva2.setDateTime(LocalDateTime.now());
+		reserva2.setDate(LocalDate.now());
+		reserva2.setHour(LocalTime.now());
 		reserva2.setClient(client2);
 		reserva2.setRestaurant(res2);		
 
 		Reservation reserva3 = new Reservation();
 		reserva3.setNumDiners(4);			
-		reserva3.setDateTime(LocalDateTime.now());
+		reserva3.setDate(LocalDate.now());
+		reserva3.setHour(LocalTime.now());
 		reserva3.setClient(client3);
 		reserva3.setRestaurant(res3);		
 
 		Reservation reserva4 = new Reservation();
 		reserva4.setNumDiners(5);			
-		reserva4.setDateTime(LocalDateTime.now());
+		reserva4.setDate(LocalDate.now());
+		reserva4.setHour(LocalTime.now());
 		reserva4.setClient(client4);
 		reserva4.setRestaurant(res4);		
 
 		Reservation reserva5 = new Reservation();
 		reserva5.setNumDiners(6);				
-		reserva5.setDateTime(LocalDateTime.now());
+		reserva5.setDate(LocalDate.now());
+		reserva5.setHour(LocalTime.now());
 		reserva5.setClient(client1);
 		reserva5.setRestaurant(res5);		
 
 		Reservation reserva6 = new Reservation();
 		reserva6.setNumDiners(3);			
-		reserva6.setDateTime(LocalDateTime.now());
+		reserva6.setDate(LocalDate.now());
+		reserva6.setHour(LocalTime.now());
 		reserva6.setClient(client2);
 		reserva6.setRestaurant(res1);		
 
 		Reservation reserva7 = new Reservation();
 		reserva7.setNumDiners(2);			
-		reserva7.setDateTime(LocalDateTime.now());
+		reserva7.setDate(LocalDate.now());
+		reserva7.setHour(LocalTime.now());
 		reserva7.setClient(client3);
 		reserva7.setRestaurant(res2);
 

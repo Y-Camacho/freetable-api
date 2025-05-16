@@ -24,7 +24,6 @@ public class Client {
     @JoinColumn(name = "admin_email")
     private Admin admin;
 
-
     // Accesores
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }

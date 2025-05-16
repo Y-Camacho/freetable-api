@@ -1,6 +1,7 @@
 package cat.ycamacho.freetable_api.models;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +17,9 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int numDiners;
-    private LocalDateTime dateTime;
+    private LocalDate date;
+    private LocalTime hour;
+    private String fromClientName;
 
     @ManyToOne
     @JoinColumn(name = "restaurant_id")
@@ -25,12 +28,21 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "client_email")
     private Client client;
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
     
     public int getNumDiners() { return numDiners; }
     public void setNumDiners(int numDiners) { this.numDiners = numDiners; }
-    
-    public LocalDateTime getDateTime() { return dateTime; }
-    public void setDateTime(LocalDateTime dateTime) { this.dateTime = dateTime; }
+
+    public String getFromClientName() { return fromClientName; }
+    public void setFromClientName(String fromClientName) { this.fromClientName = fromClientName; }
+
+    public LocalDate getDate() { return date; }
+    public void setDate(LocalDate date) { this.date = date; }
+
+    public LocalTime getHour() { return hour; }
+    public void setHour(LocalTime hour) { this.hour = hour; }
 
     public Restaurant getRestaurant() { return restaurant; }
     public void setRestaurant(Restaurant restaurant) { this.restaurant = restaurant; }
@@ -40,8 +52,8 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation [id=" + id + ", numDiners=" + numDiners + ", dateTime=" + dateTime + ", restaurant="
-                 + "]";
+        return "Reservation: {id=" + id + ", numDiners=" + numDiners + ", date=" + date + ", hour=" + hour
+                + ", fromClientName=" + fromClientName + ", restaurant=" + restaurant + ", client=" + client + "}";
     }
     @Override
     public int hashCode() {
