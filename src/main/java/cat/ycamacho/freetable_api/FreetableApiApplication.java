@@ -109,6 +109,117 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res5.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		_RestaurantRepository.save(res5);
 
+		Restaurant res6 = new Restaurant();
+		res6.setAdmin(admin);
+		res6.setAddress("Avenida del Mar 10");
+		res6.setName("Sabores del Sur");
+		res6.setEmail("restTest6@gmail.com");
+		res6.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res6.setNumDiners(25);
+		res6.setTagsString("parrilla,mediterraneo");
+		res6.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res6);
+
+		Restaurant res7 = new Restaurant();
+		res7.setAdmin(admin);
+		res7.setAddress("Calle Sol Naciente 5");
+		res7.setName("El Rincón de los Sabores");
+		res7.setEmail("restTest7@gmail.com");
+		res7.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res7.setNumDiners(25);
+		res7.setTagsString("parrilla,mediterraneo");
+		res7.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res7);
+
+		Restaurant res8 = new Restaurant();
+		res8.setAdmin(admin);
+		res8.setAddress("Calle de la Esperanza 18");
+		res8.setName("Fuego y Sabor");
+		res8.setEmail("restTest8@gmail.com");
+		res8.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res8.setNumDiners(25);
+		res8.setTagsString("parrilla,mediterraneo");
+		res8.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res8);
+
+		Restaurant res9 = new Restaurant();
+		res9.setAdmin(admin);
+		res9.setAddress("Calle del Río 21");
+		res9.setName("Brasa y Aroma");
+		res9.setEmail("restTest9@gmail.com");
+		res9.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res9.setNumDiners(25);
+		res9.setTagsString("parrilla,mediterraneo");
+		res9.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res9);
+
+		Restaurant res10 = new Restaurant();
+		res10.setAdmin(admin);
+		res10.setAddress("Calle de las Flores 3");
+		res10.setName("Sazón Mediterránea");
+		res10.setEmail("restTest10@gmail.com");
+		res10.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res10.setNumDiners(25);
+		res10.setTagsString("parrilla,mediterraneo");
+		res10.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res10);
+
+		Restaurant res11 = new Restaurant();
+		res11.setAdmin(admin);
+		res11.setAddress("Paseo de la Luna 7");
+		res11.setName("La Cazuela");
+		res11.setEmail("restTest11@gmail.com");
+		res11.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res11.setNumDiners(25);
+		res11.setTagsString("parrilla,mediterraneo");
+		res11.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res11);
+
+		Restaurant res12 = new Restaurant();
+		res12.setAdmin(admin);
+		res12.setAddress("Calle del Bosque 12");
+		res12.setName("Monte y Mar");
+		res12.setEmail("restTest12@gmail.com");
+		res12.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res12.setNumDiners(25);
+		res12.setTagsString("parrilla,mediterraneo");
+		res12.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res12);
+
+		Restaurant res13 = new Restaurant();
+		res13.setAdmin(admin);
+		res13.setAddress("Camino Viejo 9");
+		res13.setName("Raíces del Sabor");
+		res13.setEmail("restTest13@gmail.com");
+		res13.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res13.setNumDiners(25);
+		res13.setTagsString("parrilla,mediterraneo");
+		res13.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res13);
+
+		Restaurant res14 = new Restaurant();
+		res14.setAdmin(admin);
+		res14.setAddress("Calle del Buen Gusto 15");
+		res14.setName("El Fogón de Lola");
+		res14.setEmail("restTest14@gmail.com");
+		res14.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res14.setNumDiners(25);
+		res14.setTagsString("parrilla,mediterraneo");
+		res14.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res14);
+
+		Restaurant res15 = new Restaurant();
+		res15.setAdmin(admin);
+		res15.setAddress("Plaza del Encuentro 4");
+		res15.setName("Delicias del Puerto");
+		res15.setEmail("restTest15@gmail.com");
+		res15.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
+		res15.setNumDiners(25);
+		res15.setTagsString("parrilla,mediterraneo");
+		res15.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		_RestaurantRepository.save(res15);
+
+
 		// CLIENTES
 		Client client1 = new Client();
 		client1.setAdmin(admin);

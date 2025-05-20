@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +25,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api/restaurant")
 public class RestaurantController {
@@ -36,11 +39,22 @@ public class RestaurantController {
     public RestaurantController(){ }
 
     @GetMapping
-    public List<Restaurant> getRestaurants(@RequestParam(required = false) String resName, @RequestParam(required = false) String tag) {
-        List<Restaurant> restaurants = _RestaurantRepository.findByNameAndTag(resName, tag);
+    public List<Restaurant> getRestaurants(
+            @RequestParam(required = false) String resName,
+            @RequestParam(required = false) String tag,
+            @RequestParam(required = false) Integer limit) {
 
-        return restaurants;
+        if (resName != null && resName.isEmpty()) resName = null;
+        if (tag != null && tag.isEmpty()) tag = null;
+
+        // Si no se especifica el límite, se usa Integer.MAX_VALUE
+        int recordLimit = (limit != null && limit > 0) ? limit : Integer.MAX_VALUE;
+
+        Pageable pageable = PageRequest.of(0, recordLimit);
+
+        return _RestaurantRepository.findByNameAndTag(resName, tag, pageable);
     }
+
 
     @GetMapping("/{resId}")
     public Restaurant getRestaurantById(@PathVariable String resId) {

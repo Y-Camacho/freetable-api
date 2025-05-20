@@ -13,10 +13,12 @@ import org.springframework.web.server.ResponseStatusException;
 import cat.ycamacho.freetable_api.models.Admin;
 import cat.ycamacho.freetable_api.models.dto.UserDTO;
 import cat.ycamacho.freetable_api.repositories.AdminRepository;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
