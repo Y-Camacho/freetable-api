@@ -64,6 +64,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res1.setTagsString("mediterraneo,asiatico");
 		res1.setImages(Arrays.asList("res_1_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res1.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res1.setNumberPhone("654254145");
 		_RestaurantRepository.save(res1);
 
 		Restaurant res2 = new Restaurant();
@@ -76,6 +77,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res2.setTagsString("parrilla,asiatico");
 		res2.setImages(Arrays.asList("res_2_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res2.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res2.setNumberPhone("654254145");
 		_RestaurantRepository.save(res2);
 
 		Restaurant res3 = new Restaurant();
@@ -88,6 +90,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res3.setTagsString("vegano,vegetariano");
 		res3.setImages(Arrays.asList("res_3_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res3.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res3.setNumberPhone("654254145");
 		_RestaurantRepository.save(res3);
 
 		Restaurant res4 = new Restaurant();
@@ -100,6 +103,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res4.setTagsString("parrilla,italiano");
 		res4.setImages(Arrays.asList("res_4_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res4.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res4.setNumberPhone("654254145");
 		_RestaurantRepository.save(res4);
 
 		Restaurant res5 = new Restaurant();
@@ -112,6 +116,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res5.setTagsString("parrilla,mediterraneo");
 		res5.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res5.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res5.setNumberPhone("654254145");
 		_RestaurantRepository.save(res5);
 
 		Restaurant res6 = new Restaurant();
@@ -124,6 +129,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res6.setTagsString("parrilla,mediterraneo");
 		res6.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res6.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res6.setNumberPhone("654254145");
 		_RestaurantRepository.save(res6);
 
 		Restaurant res7 = new Restaurant();
@@ -136,6 +142,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res7.setTagsString("parrilla,mediterraneo");
 		res7.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res7.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res7.setNumberPhone("654254145");
 		_RestaurantRepository.save(res7);
 
 		Restaurant res8 = new Restaurant();
@@ -148,6 +155,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res8.setTagsString("parrilla,mediterraneo");
 		res8.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res8.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res8.setNumberPhone("654254145");
 		_RestaurantRepository.save(res8);
 
 		Restaurant res9 = new Restaurant();
@@ -160,6 +168,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res9.setTagsString("parrilla,mediterraneo");
 		res9.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res9.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res9.setNumberPhone("654254145");
 		_RestaurantRepository.save(res9);
 
 		Restaurant res10 = new Restaurant();
@@ -172,6 +181,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res10.setTagsString("parrilla,mediterraneo");
 		res10.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res10.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res10.setNumberPhone("654254145");
 		_RestaurantRepository.save(res10);
 
 		Restaurant res11 = new Restaurant();
@@ -184,6 +194,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res11.setTagsString("parrilla,mediterraneo");
 		res11.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res11.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res11.setNumberPhone("654254145");
 		_RestaurantRepository.save(res11);
 
 		Restaurant res12 = new Restaurant();
@@ -196,6 +207,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res12.setTagsString("parrilla,mediterraneo");
 		res12.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res12.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res12.setNumberPhone("654254145");
 		_RestaurantRepository.save(res12);
 
 		Restaurant res13 = new Restaurant();
@@ -208,6 +220,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res13.setTagsString("parrilla,mediterraneo");
 		res13.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res13.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res13.setNumberPhone("654254145");
 		_RestaurantRepository.save(res13);
 
 		Restaurant res14 = new Restaurant();
@@ -220,6 +233,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res14.setTagsString("parrilla,mediterraneo");
 		res14.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res14.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res14.setNumberPhone("654254145");
 		_RestaurantRepository.save(res14);
 
 		Restaurant res15 = new Restaurant();
@@ -232,6 +246,7 @@ public class FreetableApiApplication implements CommandLineRunner {
 		res15.setTagsString("parrilla,mediterraneo");
 		res15.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
 		res15.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
+		res15.setNumberPhone("654254145");
 		_RestaurantRepository.save(res15);
 
 		// CLIENTES

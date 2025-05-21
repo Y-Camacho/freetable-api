@@ -35,6 +35,7 @@ public class Restaurant {
 
     private String address;
     private int numDiners;
+    private String numberPhone;
 
     @ElementCollection
     @CollectionTable(name = "restaurant_tags", joinColumns = @JoinColumn(name = "restaurant_id"))
@@ -133,11 +134,16 @@ public class Restaurant {
     public List<String> getMenus() { return menus; }
     public void setMenus(List<String> menus) { this.menus = menus; }
 
+    public String getNumberPhone() { return numberPhone; }
+    public void setNumberPhone(String numberPhone) { this.numberPhone = numberPhone; }
+
+    
+
     @Override
     public String toString() {
         return "Restaurant: {id=" + id + ", name=" + name + ", email=" + email + ", description=" + description
-                + ", address=" + address + ", numDiners=" + numDiners + ", tags=" + tags + ", images=" + images
-                + ", menus=" + menus + ", admin=" + admin + "}";
+                + ", address=" + address + ", numDiners=" + numDiners + ", numberPhone=" + numberPhone + ", tags="
+                + tags + ", images=" + images + ", menus=" + menus + ", admin=" + admin + "}";
     }
 
     @Override

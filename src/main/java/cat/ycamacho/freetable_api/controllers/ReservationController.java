@@ -83,7 +83,7 @@ public class ReservationController {
         reservation.setHour(booking.getHour());
         _ReservationReposiroty.save(reservation);
 
-        this.emailService.sendNewReservationEmail(booking, restaurant.getEmail(), restaurant.getName(), restaurant.getEmail());
+        this.emailService.sendNewReservationEmail(booking, restaurant.getEmail(), restaurant.getName(), restaurant.getNumberPhone());
 
         return reservation;
     }
