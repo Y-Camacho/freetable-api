@@ -3,6 +3,7 @@ package cat.ycamacho.freetable_api.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import cat.ycamacho.freetable_api.exceptions.RestaurantCapacityExceededException;
 import cat.ycamacho.freetable_api.models.Admin;
 import cat.ycamacho.freetable_api.models.Client;
 import cat.ycamacho.freetable_api.models.Reservation;
@@ -61,6 +62,12 @@ public class ReservationController {
         Admin admin = new Admin("super@gmail.com");
 
         Restaurant restaurant = _RestaurantRepository.findById(booking.getRestaurantId()).orElseThrow();
+
+        Integer numDinersToDay = _ReservationReposiroty.getTotalDinersByRestaurantAndDate(String.valueOf(restaurant.getId()), booking.getDate());
+        if (numDinersToDay == null) numDinersToDay = 0;
+        if((numDinersToDay + booking.getNumDiners()) > restaurant.getNumDiners()){
+            throw new RestaurantCapacityExceededException("El restaurante " + restaurant.getName() + " no tiene capacidad para esta reserva el día de hoy");
+        }
 
         Optional<Client> optClient = _ClientRespository.findById(booking.getClientEmail());
         Client client = new Client();

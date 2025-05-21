@@ -1,5 +1,6 @@
 package cat.ycamacho.freetable_api.repositories;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Modifying;
@@ -26,5 +27,9 @@ public interface ReservationReposiroty extends CrudRepository<Reservation, Long>
     @Transactional
     @Query("DELETE FROM Reservation r WHERE r.client.email = ?1")
     void reremoveByEmailClient(String clientEmail);
+
+    @Query("SELECT SUM(r.numDiners) FROM Reservation r WHERE r.restaurant.id = :restaurantId AND r.date = :date")
+    Integer getTotalDinersByRestaurantAndDate(@Param("restaurantId") String restaurantId, @Param("date") LocalDate date);
+
 
 }
