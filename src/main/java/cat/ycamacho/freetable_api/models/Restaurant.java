@@ -46,6 +46,11 @@ public class Restaurant {
     @Column(name = "image")
     private List<String> images;
 
+    @ElementCollection
+    @CollectionTable(name = "restaurant_menu", joinColumns = @JoinColumn(name = "restaurant_id"))
+    @Column(name = "menu")
+    private List<String> menus;
+
     // @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     // private List<Reservation> reservations; //
 
@@ -124,12 +129,15 @@ public class Restaurant {
     
     public List<String> getImages() { return images; }
     public void setImages(List<String> images) { this.images = images; }
-    
+
+    public List<String> getMenus() { return menus; }
+    public void setMenus(List<String> menus) { this.menus = menus; }
+
     @Override
     public String toString() {
-        return "Restaurant [id=" + id + ", name=" + name + ", email=" + email + ", description=" + description
+        return "Restaurant: {id=" + id + ", name=" + name + ", email=" + email + ", description=" + description
                 + ", address=" + address + ", numDiners=" + numDiners + ", tags=" + tags + ", images=" + images
-                + ", admin=" + admin + "]";
+                + ", menus=" + menus + ", admin=" + admin + "}";
     }
 
     @Override

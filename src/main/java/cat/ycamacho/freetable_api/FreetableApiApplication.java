@@ -56,169 +56,183 @@ public class FreetableApiApplication implements CommandLineRunner {
 		// RESTAURANTES
 		Restaurant res1 = new Restaurant();
 		res1.setAdmin(admin);
-		res1.setAddress("Calle l'ensenyanza 23");
+		res1.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res1.setName("El refujio del sabor");
 		res1.setEmail("restaurant1@email.com");
 		res1.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res1.setNumDiners(25);
 		res1.setTagsString("mediterraneo,asiatico");
 		res1.setImages(Arrays.asList("res_1_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res1.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res1);
 
 		Restaurant res2 = new Restaurant();
 		res2.setAdmin(admin);
-		res2.setAddress("Calle l'ensenyanza 23");
+		res2.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res2.setName("La Cueva del Chef");
 		res2.setEmail("restaurant2@email.com");
 		res2.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res2.setNumDiners(25);
 		res2.setTagsString("parrilla,asiatico");
 		res2.setImages(Arrays.asList("res_2_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res2.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res2);
 
 		Restaurant res3 = new Restaurant();
 		res3.setAdmin(admin);
-		res3.setAddress("Calle l'ensenyanza 23");
+		res3.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res3.setName("El Jardín de los Sabores");
 		res3.setEmail("restaurant3@email.com");
 		res3.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res3.setNumDiners(25);
 		res3.setTagsString("vegano,vegetariano");
 		res3.setImages(Arrays.asList("res_3_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res3.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res3);
 
 		Restaurant res4 = new Restaurant();
 		res4.setAdmin(admin);
-		res4.setAddress("Calle l'ensenyanza 23");
+		res4.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res4.setName("Sabores de la Tierra");
 		res4.setEmail("restaurant4@email.com");
 		res4.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res4.setNumDiners(25);
 		res4.setTagsString("parrilla,italiano");
 		res4.setImages(Arrays.asList("res_4_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res4.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res4);
 
 		Restaurant res5 = new Restaurant();
 		res5.setAdmin(admin);
-		res5.setAddress("Calle l'ensenyanza 23");
+		res5.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res5.setName("La Taberna de la Abuela");
 		res5.setEmail("restaurant5@email.com");
 		res5.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res5.setNumDiners(25);
 		res5.setTagsString("parrilla,mediterraneo");
 		res5.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res5.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res5);
 
 		Restaurant res6 = new Restaurant();
 		res6.setAdmin(admin);
-		res6.setAddress("Avenida del Mar 10");
+		res6.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res6.setName("Sabores del Sur");
 		res6.setEmail("restTest6@gmail.com");
 		res6.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res6.setNumDiners(25);
 		res6.setTagsString("parrilla,mediterraneo");
 		res6.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res6.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res6);
 
 		Restaurant res7 = new Restaurant();
 		res7.setAdmin(admin);
-		res7.setAddress("Calle Sol Naciente 5");
+		res7.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res7.setName("El Rincón de los Sabores");
 		res7.setEmail("restTest7@gmail.com");
 		res7.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res7.setNumDiners(25);
 		res7.setTagsString("parrilla,mediterraneo");
 		res7.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res7.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res7);
 
 		Restaurant res8 = new Restaurant();
 		res8.setAdmin(admin);
-		res8.setAddress("Calle de la Esperanza 18");
+		res8.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res8.setName("Fuego y Sabor");
 		res8.setEmail("restTest8@gmail.com");
 		res8.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res8.setNumDiners(25);
 		res8.setTagsString("parrilla,mediterraneo");
 		res8.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res8.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res8);
 
 		Restaurant res9 = new Restaurant();
 		res9.setAdmin(admin);
-		res9.setAddress("Calle del Río 21");
+		res9.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res9.setName("Brasa y Aroma");
 		res9.setEmail("restTest9@gmail.com");
 		res9.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res9.setNumDiners(25);
 		res9.setTagsString("parrilla,mediterraneo");
 		res9.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res9.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res9);
 
 		Restaurant res10 = new Restaurant();
 		res10.setAdmin(admin);
-		res10.setAddress("Calle de las Flores 3");
+		res10.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res10.setName("Sazón Mediterránea");
 		res10.setEmail("restTest10@gmail.com");
 		res10.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res10.setNumDiners(25);
 		res10.setTagsString("parrilla,mediterraneo");
 		res10.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res10.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res10);
 
 		Restaurant res11 = new Restaurant();
 		res11.setAdmin(admin);
-		res11.setAddress("Paseo de la Luna 7");
+		res11.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res11.setName("La Cazuela");
 		res11.setEmail("restTest11@gmail.com");
 		res11.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res11.setNumDiners(25);
 		res11.setTagsString("parrilla,mediterraneo");
 		res11.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res11.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res11);
 
 		Restaurant res12 = new Restaurant();
 		res12.setAdmin(admin);
-		res12.setAddress("Calle del Bosque 12");
+		res12.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res12.setName("Monte y Mar");
 		res12.setEmail("restTest12@gmail.com");
 		res12.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res12.setNumDiners(25);
 		res12.setTagsString("parrilla,mediterraneo");
 		res12.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res12.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res12);
 
 		Restaurant res13 = new Restaurant();
 		res13.setAdmin(admin);
-		res13.setAddress("Camino Viejo 9");
+		res13.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res13.setName("Raíces del Sabor");
 		res13.setEmail("restTest13@gmail.com");
 		res13.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res13.setNumDiners(25);
 		res13.setTagsString("parrilla,mediterraneo");
 		res13.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res13.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res13);
 
 		Restaurant res14 = new Restaurant();
 		res14.setAdmin(admin);
-		res14.setAddress("Calle del Buen Gusto 15");
+		res14.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res14.setName("El Fogón de Lola");
 		res14.setEmail("restTest14@gmail.com");
 		res14.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res14.setNumDiners(25);
 		res14.setTagsString("parrilla,mediterraneo");
 		res14.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res14.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res14);
 
 		Restaurant res15 = new Restaurant();
 		res15.setAdmin(admin);
-		res15.setAddress("Plaza del Encuentro 4");
+		res15.setAddress("Calle Alustante, 11, C. de Clara del Rey, 33, Posterior, 28002 Madrid");
 		res15.setName("Delicias del Puerto");
 		res15.setEmail("restTest15@gmail.com");
 		res15.setDescription("Un restaurante acogedor que ofrece una experiencia culinaria única, combinando ingredientes frescos y sabores tradicionales con un toque moderno. El ambiente relajado y la decoración rústica te invitan a disfrutar de cada plato como si estuvieras en casa.");
 		res15.setNumDiners(25);
 		res15.setTagsString("parrilla,mediterraneo");
 		res15.setImages(Arrays.asList("res_5_banner.jpg", "res_default_1.jpg", "res_default_2.jpg", "res_default_3.jpg"));
+		res15.setMenus(Arrays.asList("menu-test1.pdf", "menu-test2.pdf", "menu-test3.pdf"));
 		_RestaurantRepository.save(res15);
-
 
 		// CLIENTES
 		Client client1 = new Client();
@@ -383,7 +397,4 @@ public class FreetableApiApplication implements CommandLineRunner {
 		_ReservationRepository.save(reserva7);
 
 	}
-
-	
-
 }

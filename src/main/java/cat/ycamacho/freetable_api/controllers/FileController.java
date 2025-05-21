@@ -21,8 +21,9 @@ import java.nio.file.Paths;
 public class FileController {
 
     private final String IMAGE_DIRECTORY = "src/main/resources/static/images/";
+    private final String PDF_DIRECTORY = "src/main/resources/static/menus/";
 
-    @GetMapping
+    @GetMapping("/image")
     public ResponseEntity<Resource> getImage(@RequestParam("imgName") String imgName) {
         try {
             // Construir la ruta de la imagen
@@ -49,4 +50,33 @@ public class FileController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @GetMapping("/menu")
+    public ResponseEntity<Resource> getPdf(@RequestParam("fileName") String fileName) {
+        try {
+            // Directorio donde se almacenan los PDFs
+            Path pdfPath = Paths.get(PDF_DIRECTORY + fileName);
+            Resource resource = new UrlResource(pdfPath.toUri());
+
+            // Verificar si el recurso existe y es legible
+            if (!resource.exists() || !resource.isReadable()) {
+                return ResponseEntity.notFound().build();
+            }
+
+            // Verifica que el archivo sea un PDF
+            if (!fileName.toLowerCase().endsWith(".pdf")) {
+                return ResponseEntity.badRequest().build();
+            }
+
+            // Crear la respuesta
+            return ResponseEntity.ok()
+                    .contentType(MediaType.APPLICATION_PDF)
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + resource.getFilename() + "\"")
+                    .body(resource);
+
+        } catch (MalformedURLException e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
 }
