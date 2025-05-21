@@ -11,9 +11,20 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import cat.ycamacho.freetable_api.exceptions.RestaurantCapacityExceededException;
+import cat.ycamacho.freetable_api.exceptions.UnAuthorizedException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(UnAuthorizedException.class)
+    public ResponseEntity<Map<String, Object>> handleUnAuthorizedException(UnAuthorizedException ex) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", HttpStatus.FORBIDDEN.value());
+        response.put("error", "Forbidden authorization");
+        response.put("message", ex.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.FORBIDDEN);
+    }
 
     @ExceptionHandler(RestaurantCapacityExceededException.class)
     public ResponseEntity<Map<String, Object>> handleCapacityException(RestaurantCapacityExceededException ex) {
