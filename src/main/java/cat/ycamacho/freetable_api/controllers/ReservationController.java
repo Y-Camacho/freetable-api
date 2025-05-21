@@ -11,6 +11,7 @@ import cat.ycamacho.freetable_api.models.dto.ReservationDTO;
 import cat.ycamacho.freetable_api.repositories.ClientRespository;
 import cat.ycamacho.freetable_api.repositories.ReservationReposiroty;
 import cat.ycamacho.freetable_api.repositories.RestaurantRepository;
+import cat.ycamacho.freetable_api.services.EmailService;
 
 import java.util.HashMap;
 import java.util.List;
@@ -40,6 +41,9 @@ public class ReservationController {
 
     @Autowired
     RestaurantRepository _RestaurantRepository;
+
+    @Autowired
+    private EmailService emailService;
 
     @GetMapping
     public List<Reservation> getReservations(@RequestParam(required = false) Integer resId, @RequestParam(required = false) String clientEmail) {
@@ -78,6 +82,8 @@ public class ReservationController {
         reservation.setDate(booking.getDate());
         reservation.setHour(booking.getHour());
         _ReservationReposiroty.save(reservation);
+
+        this.emailService.sendNewReservationEmail(booking, restaurant.getEmail(), restaurant.getName(), restaurant.getEmail());
 
         return reservation;
     }
