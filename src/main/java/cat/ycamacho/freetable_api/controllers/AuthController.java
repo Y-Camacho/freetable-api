@@ -50,10 +50,16 @@ public class AuthController {
     @GetMapping("check-status")
     public Map<String, Object> checkStatus(@RequestHeader("Authorization") String authorizationHeader) {
         try {
+            Admin admin = _AdminRepository.findById("super@gmail.com").orElseThrow();
+
+            UserDTO userDTO = new UserDTO();
+            userDTO.setEmail(admin.getEmail());
+            userDTO.setFullName(admin.getName());
             // Extraer el token (sin "Bearer ")
             String token = authorizationHeader.replace("Bearer ", "");
 
             Map<String, Object> mapResponse = new HashMap<String, Object>();
+            mapResponse.put("user", userDTO);
             mapResponse.put("token", token);
         
         return mapResponse;
